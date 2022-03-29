@@ -3,14 +3,14 @@
 ### Date created
 29th March 2022
 
-##Project Title
+##Project Title:
 Bikeshare Project
 
-##Description
+##Description:
 Explore bikeshare data for Chicago, New York City and Washington
 
-##Files used
+##Files used:
 chicago.csv, new_york_city.csv and washington.csv
 
-##Credits
+##Credits:
 Thank you to the Udacity mentors for kindly and patiently answering my many questions!

@@ -36,20 +36,20 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    
+
     print('Hello! Let\'s explore some US bikeshare data!')
 
     # gets user input for city (chicago, new york city, washington) using a while loop to handle invalid inputs
     while True:
-        city = input('please enter one of the following cities: chicago, new york city or washington: ').lower()
+        city = input('Please enter one of the following cities: Chicago, New York City or Washington: ').lower()
         if city not in CITY_DATA:
-            print('that is not a valid city. please try again')
+            print('That is not a valid city. Please try again')
         else:
             break
 
     # gets user input for month (all, january, february, ... , june)
     while True:
-        month = input('please enter one of the following months or type "all" to display data for all months: ').lower()
+        month = input('Please enter one of the following months or type "all" to display data for all months: ').lower()
         months = [
             'january',
             'february',
@@ -59,13 +59,13 @@ def get_filters():
             'june',
             ]
         if month != 'all' and month not in months:
-            print('that is not a valid month. please try again')
+            print('That is not a valid month. Please try again')
         else:
             break
 
     # gets user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input('please enter one of the following days or type "all" to display data for all days: ').lower()
+        day = input('Please enter one of the following days or type "all" to display data for all days: ').lower()
         days = [
             'monday',
             'tuesday',
@@ -76,22 +76,22 @@ def get_filters():
             'sunday',
             ]
         if day != 'all' and day not in days:
-            print('that is not a valid day. please try again')
+            print('That is not a valid day. Please try again')
         else:
             break
 
         # loads the data into dataframe
     df = pd.read_csv(CITY_DATA[city])
-    
+
     # gets user input to view first five rows of data
-    view_data = input('would you like to see the first five rows of data? please type "yes" or "no" ').lower()
+    view_data = input('Would you like to see the first five rows of data? Please type "yes" or "no" ').lower()
     start_loc = 0
     keep_asking = True
     while (keep_asking):
         print(df.iloc[start_loc:start_loc + 5])
         start_loc += 5
-        view_display = input('would you like to see the next five rows of data? please type "yes" or "no" ').lower()
-        if view_display == "no": 
+        view_display = input('Would you like to see the next five rows of data? Please type "yes" or "no" ').lower()
+        if view_display == "no":
             keep_asking = False
 
     print('-' * 40)

@@ -65,7 +65,7 @@ def get_filters():
 
     # gets user input for day of week (all, monday, tuesday, ... sunday)
     while True:
-        day = input('Please enter one of the following days or type "all" to display data for all days: ').lower()
+        day = input('Please enter a day to view or type "all" to display data for all days: ').lower()
         days = [
             'monday',
             'tuesday',
